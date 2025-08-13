@@ -7,7 +7,7 @@ import AdminList from "../components/admin/admin-list/page";
 import { User } from "@/app/models/User";
 import { LoginData } from "@/app/models/loginData";
 
-export function Admin() {
+export default function Admin() {
   const [loading, setLoading] = useState(true);
   const [newAdminPublicKey, setNewAdminPublicKey] = useState<string>("");
   const [activeTab, setActiveTab] = useState<'dashboard' | 'admins'>('dashboard');
@@ -130,5 +130,3 @@ export function Admin() {
     </div>
   );
 }
-
-export default Admin;

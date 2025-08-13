@@ -1,7 +1,7 @@
 import React from "react";
 import "./termsAndConditions.scss";
 
-export function TermsAndConditions() {
+export default  function TermsAndConditions() {
   return (
     <div className="termsAndConditions socialsFooterPadding">
       <h1 className="pageTitle unbounded">
@@ -135,4 +135,3 @@ export function TermsAndConditions() {
   );
 }
 
-export default TermsAndConditions;

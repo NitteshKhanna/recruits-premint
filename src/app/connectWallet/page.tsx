@@ -4,7 +4,7 @@ import "./connectWalltet.scss";
 import ConnectWallet from "../components/connect-wallet/connect-wallet";
 
 
-export function ConnectYourWallet()
+export default function ConnectYourWallet()
 {
     return (
         <div className="connectWallet flex socialsFooterPadding">
@@ -24,5 +24,3 @@ export function ConnectYourWallet()
         </div>
     );
 }
-
-export default ConnectYourWallet;
