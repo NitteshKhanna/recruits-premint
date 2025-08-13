@@ -1,0 +1,51 @@
+.notFound {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("/images/notFound/desktopBG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  .notFoundContainer {
+    flex-basis: 100%;
+    justify-content: center;
+    gap: 3rem;
+    .notFoundImg {
+      display: none;
+    }
+    .title {
+      width: 100%;
+      font-weight: 700;
+      font-size: 6rem;
+      text-align: center;
+    }
+    button {
+      a {
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .notFound {
+    background-image: none;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    .notFoundContainer {
+      .notFoundImg {
+        display: block;
+        opacity: 70%;
+        // filter: blur(1px);
+        height: 50vh;
+      }
+      .title 
+      {
+        font-size: 3rem;
+      }
+    }
+  }
+}

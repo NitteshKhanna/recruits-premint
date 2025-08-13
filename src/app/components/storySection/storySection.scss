@@ -1,0 +1,52 @@
+.storySection {
+  padding: 2vw;
+  .sec1 {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .sec2 {
+    padding: 8vw;
+    justify-content: space-between;
+
+    p {
+      height: 8.9rem;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 1.5rem;
+      flex-basis: 60%;
+      background-color: #2a2a2a;
+      border: 1px solid white;
+      span {
+        text-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .storySection {
+    margin-bottom: 3rem;
+    .sec1 {
+      margin-bottom: 2rem;
+      .storySectionImg {
+        width: 80%;
+      }
+    }
+    .sec2 {
+      width: 100vw;
+      padding: 2.5vw;
+      .sectionTitle {
+        width: 100%;
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+      }
+      p {
+        padding: 1.5rem;
+        width: 100%;
+        flex-basis: 95%;
+        height: max-content;
+        font-size: .75rem;
+      }
+    }
+  }
+}

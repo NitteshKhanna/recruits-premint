@@ -1,0 +1,18 @@
+[
+  {
+    "name": "about",
+    "footerType": "Big"
+  },
+  {
+    "name": "admin",
+    "footerType": "Small"
+  },
+  {
+    "name": "termsAndConditions",
+    "footerType": "Small"
+  },
+  {
+    "name": "connectWallet",
+    "footerType": "Small"
+  }
+]

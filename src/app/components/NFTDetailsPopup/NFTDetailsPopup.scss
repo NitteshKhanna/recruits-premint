@@ -1,0 +1,205 @@
+@import '../../variables.scss';
+
+.nftPopupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+    flex-wrap: wrap;
+    
+    @media (max-width: 768px) {
+      padding: 1rem;
+      align-items: center;
+      overflow-y: auto;
+    }
+  }
+  
+  .nftPopupContent {
+    display: flex;
+    background: $black;
+    border: 1px solid $white;
+    width: 75vw;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    gap: 3rem;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      max-width: 95vw;
+      width: 100%;
+      gap: 1rem;
+      max-height: 85vh;
+      overflow-y: auto;
+      border-radius: 0.25rem;
+    }
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+    color: $white;
+    
+    &:hover {
+      background: transparent;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+  
+  .nftPopupImageContainer {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2rem;
+    
+    @media (max-width: 768px) {
+      flex: none;
+      width: 100%;
+      justify-content: center;
+      max-height: 50vh;
+      overflow: hidden;
+    }
+  }
+  
+  .nftPopupImage {
+    height: 100%;
+    width: 35vw;
+    object-fit: contain;
+    
+    @media (max-width: 768px) {
+      max-height: 50vh;
+      width: auto;
+    }
+  }
+  
+  .nftPopupDetails {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background: $black;
+    
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+  
+  .nftPopupTitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: $white;
+    
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  .nftPopupAttributes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-y: auto;
+    flex: 1;
+    
+    @media (max-width: 768px) {
+      gap: 0.35rem;
+    }
+  }
+  
+  .nftPopupAttribute {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    background: rgba(10, 15, 22, 0.6);
+    margin-bottom: 1rem;
+    position: relative;
+    background: #464646;
+    border-bottom: 1px solid $white;
+    
+    @media (max-width: 768px) {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+  
+  .attributeLabel {
+    font-size: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.75rem;
+  }
+  
+  .attributeValue {
+    font-size: 0.8rem;
+    color: $white;
+    margin-top: 0.8rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+  
+  .attributeRarity {
+    margin-left: auto;
+    color: $white;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    
+    @media (max-width: 768px) {
+      padding: 0.25rem;
+    }
+  }
+  
+  .downloadButton {
+    background: $blue;
+    color: $black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem;
+    border: none;
+    clip-path: polygon(0 40%, 15% 0, 100% 0, 100% 60%, 85% 100%, 0 100%);
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    width: 100%;
+    text-align: center;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      padding: 0.6rem;
+      margin-top: 1rem;
+    }
+  }

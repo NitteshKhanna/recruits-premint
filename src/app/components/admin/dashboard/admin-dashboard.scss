@@ -1,0 +1,571 @@
+@import '../../../variables.scss';
+
+.admin-dashboard {
+  width: 100vw;
+  padding: 3vw;
+
+  hr{
+    margin-top: 1.4rem;
+    width: 43vw;
+  }
+
+  h1 {
+    font-family: "Unbounded";
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 120%;
+    letter-spacing: 0%;
+  }
+
+  h3 {
+    font-family: "Unbounded";
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: 0%;
+  }
+
+  .admin-panel {
+    display: flex;
+    gap: 5vw;
+    padding-top: 2rem;
+
+    .form {
+      align-self: start;;
+    }
+  }
+
+    // Toast styling
+  .Toastify__toast--success {
+    background-color: $black;
+    border: 1px solid $blue;
+    color: white;
+
+    .Toastify__progress-bar {
+      background: $blue;
+    }
+  }
+
+  .Toastify__toast--error {
+    background-color: $black;
+    border: 1px solid $red;
+    color: white;
+
+    .Toastify__progress-bar {
+      background: $red;
+    }
+  }
+
+  .Toastify__close-button {
+    color: white;
+    opacity: 0.8;
+    clip-path: none;
+    border: none;
+    &:hover {
+      background: none;
+      border: none;
+      clip-path: none;
+      opacity: 1;
+    }
+  }
+}
+
+// Post announcement form
+
+
+.announcementForm {
+  margin: 0 auto;
+  padding: 1.4rem;
+  color: white;
+  margin-top: 20px;
+}
+
+.formHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid white;
+}
+
+.imageUpload {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.fileInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.addImagePlaceholder {
+  border: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='2' stroke-dasharray='15, 20' stroke-dashoffset='0' stroke-linecap='square'/%3E%3C/svg%3E");
+  padding: 4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 15rem;
+}
+
+.plusIcon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.previewContainer {
+  width: 100%;
+  height: 15rem;
+  position: relative;
+  border: 2px solid white;
+}
+
+.inputGroup {
+  margin-bottom: 1.4rem;
+}
+
+.titleInput {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.7rem 0;
+  outline: none;
+  
+  &::placeholder {
+    color: white;
+  }
+}
+
+.descriptionInput {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  outline: none;
+  resize: vertical;
+  
+  &::placeholder {
+    color: white;
+  }
+}
+
+.submitButton {
+  width: 20vw;
+  clip-path: polygon(
+    30px 0%,
+    /* Top-left cut inward */ 100% 0%,
+    100% calc(90% - 10px),
+    /* Bottom-right cut starts */ calc(85% - 10px) 100%,
+    0% 100%,
+    0% 15px /* Match the top-left cut vertically */
+  );
+  font-family: "Satoshi";
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+// Fees section
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.divider {
+  height: 1px;
+  background-color: white;
+  margin-bottom: 2rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+  margin-top: 2.2rem;
+}
+
+.section-title {
+  font-family: "Unbounded";
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  margin-bottom: 1rem;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.price-label {
+  font-family: "Unbounded";
+  font-size: 1rem;
+  font-weight: 700;
+  width: 4vw;
+}
+
+.price-input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.3rem 0;
+  margin-left: 0.7rem;
+  outline: none;
+}
+
+.update-button {
+  width: 20vw;
+  clip-path: polygon(
+    30px 5%,
+    /* Top-left cut inward */ 100% 0%,
+    100% calc(90% - 10px),
+    /* Bottom-right cut starts */ calc(85% - 10px) 95%,
+    0% 100%,
+    0% 15px /* Match the top-left cut vertically */
+  );
+  font-family: "Satoshi";
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  background: #3D3D3D;
+  color: #292929;
+  
+}
+
+.update-button.changed {
+  background-color: $blue;
+}
+
+.update-button:hover {
+  background-color: $blue;
+  opacity: 0.9;
+}
+
+// Announcements list table
+
+.announcements-list {
+  background-color: #121212;
+  color: white;
+  padding: 1.4rem;
+  width: 100%;
+  font-family: sans-serif;
+  // padding-bottom: 10rem;
+}
+
+/* Table styles */
+.announcement-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+.announcement-table th {
+  text-align: left;
+  padding: 1rem 1.3rem;
+  font-family: "Satoshi";
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+
+}
+
+.announcement-table td {
+  padding: 1rem 1.3rem;
+  border-bottom: 1px solid $white;
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+
+}
+
+.announcement-update-button {  
+  font-family: "Satoshi";
+  padding: 0.7rem 2rem;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.update-modal {
+  background-color: #121212;
+  width: 90%;
+  max-width: 50vw;
+  height: 93%;
+  padding: 1.6rem;
+  border: 1px solid $white;
+  border-radius: 2px;
+
+  .modal-buttons {
+    display: flex;
+    padding: 1rem;
+    margin-top: 0.2rem;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+
+.modal-header h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.8rem;
+  font-weight: lighter;
+  cursor: pointer;
+
+  &:hover{
+    background: none;
+    border: none;
+  }
+}
+
+.image-upload {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 1.3rem;
+}
+
+.file-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.plus-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.preview-container {
+  width: 100%;
+  height: 14rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.preview-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.6rem 0;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.description-input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+  outline: none;
+  resize: vertical;
+}
+
+.update-announcement-button {
+  width: 46%;
+  height: 1.9rem;
+  margin-right: 3rem;
+  color: black;
+  padding: 0.4rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  clip-path: polygon(
+    30px 0%,
+    /* Top-left cut inward */ 100% 0%,
+    100% calc(90% - 10px),
+    /* Bottom-right cut starts */ calc(85% - 10px) 100%,
+    0% 100%,
+    0% 15px /* Match the top-left cut vertically */
+  );
+}
+.delete-announcement-button {
+  width: 46%;
+  height: 1.9rem;
+  background-color: $red;
+  color: $black;
+  padding: 0.4rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid $red;
+  clip-path: polygon(
+    30px 0%,
+    /* Top-left cut inward */ 100% 0%,
+    100% calc(90% - 10px),
+    /* Bottom-right cut starts */ calc(85% - 10px) 100%,
+    0% 100%,
+    0% 15px /* Match the top-left cut vertically */
+  );
+}
+.delete-announcement-button:hover {
+  background-color: $hoverRed;
+  border-color: $hoverRed;
+}
+
+
+
+// Responsiveness
+@media screen and (max-width: 1024px) {
+  .admin-dashboard {
+    h1 {
+      font-size: 2rem;
+    }
+    .admin-panel {
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      hr {
+        width: 94vw;
+      }
+
+      .announcementForm {
+        .addImagePlaceholder {
+          background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='2' stroke-dasharray='15, 30' stroke-dashoffset='0' stroke-linecap='square'/%3E%3C/svg%3E");
+        }
+        .submitButton {
+          width: 85vw;
+        }
+      }
+
+      .fees-section {
+        margin-top: 3rem;
+
+        h2 {
+          font-size: 1.3rem;
+        }
+
+        .section {
+
+          .price-label {
+            width: 15vw;
+          }
+          .update-button {
+            margin-left: 1.3rem;
+            width: 85vw;
+          }
+        } 
+      }  
+    }
+
+    .list-heading {
+      margin-top: 3rem;
+    }
+
+    .announcements-list {
+      padding: 0;
+      // padding-bottom: 10rem;
+
+      .announcement-table {
+        margin-top: 2rem;
+      }
+      
+      .hide-on-mobile {
+        display: none;
+      }
+    }
+
+    .modal-overlay {
+      width: 100%;
+      .update-modal {
+        max-width: 95vw;
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .update-announcement-button{
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .description-input {
+      margin-bottom: 0.2rem;
+    }
+
+    //Toast styles
+    .Toastify__toast-container {
+      width: 90vw;
+      margin-top: 30px;
+      max-width: 320px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+  .Toastify__toast {
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+  }
+    
+
+
+  }
+  
+  
+}

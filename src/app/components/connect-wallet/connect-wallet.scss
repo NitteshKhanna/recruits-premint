@@ -1,0 +1,174 @@
+@import '../../variables.scss'; 
+  // Toast styling
+  .Toastify__toast--success {
+    background-color: $black;
+    border: 1px solid $blue;
+    color: white;
+
+    .Toastify__progress-bar {
+      background: $blue;
+    }
+  }
+
+  .Toastify__toast--error {
+    background-color: $black;
+    border: 1px solid $red;
+    color: white;
+
+    .Toastify__progress-bar {
+      background: $red;
+    }
+  }
+
+  .Toastify__close-button {
+    color: white;
+    opacity: 0.8;
+    clip-path: none;
+    border: none;
+    &:hover {
+      background: none;
+      border: none;
+      clip-path: none;
+      opacity: 1;
+    }
+  }
+.connectWalletPageBtn
+{
+  width: 90%;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: transparent solid 1px;
+    outline: none;
+
+    clip-path: none;
+    cursor: pointer;
+    background-color: #0b545f;
+    &:hover {
+      background-color: #117786e2;
+      // color: black;
+      border: $btnHoverBlue solid 1px;
+    }
+}
+.connect-wallet-button {
+    background: linear-gradient(to right, #4f46e5, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    
+    &:hover {
+      background: linear-gradient(to right, #4338ca, #4f46e5);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: none;
+    }
+    
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+    
+    .wallet-address {
+      font-family: var(--font-geist-mono);
+    }
+  }
+  
+  // Signature popup styles
+  .signature-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+  }
+  
+  .signature-popup {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    
+    h3 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #111827;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    
+    .message-to-sign {
+      background-color: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 24px;
+      // font-family: var(--font-geist-mono);
+      font-size: 14px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: #374151;
+    }
+    
+    .error-message {
+      color: #ef4444;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    
+    .signature-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      
+      button {
+        border-radius: 8px;
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        
+        &:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+      }
+      
+      .cancel-button {
+        background-color: white;
+        border: 1px solid #d1d5db;
+        color: #4b5563;
+        
+        &:hover:not(:disabled) {
+          background-color: #f9fafb;
+        }
+      }
+      
+      .sign-button {
+        background-color: #4f46e5;
+        border: 1px solid #4f46e5;
+        color: white;
+        
+        &:hover:not(:disabled) {
+          background-color: #4338ca;
+        }
+      }
+    }
+  }

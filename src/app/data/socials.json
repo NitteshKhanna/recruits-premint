@@ -1,0 +1,20 @@
+[
+  {
+    "imageUrlBig": "/images/socials/x.svg",
+    "imageUrlSmall": "/images/socialsFooter/x.svg",
+    "name": "X",
+    "link": "https://x.com/Recruitsworld/"
+  },
+  {
+    "imageUrlBig": "/images/socials/discord.svg",
+    "imageUrlSmall": "/images/socialsFooter/discord.svg",
+    "name": "discord",
+    "link": "https://discord.gg/TS4zfPR8rm"
+  },
+  {
+    "imageUrlBig": "/images/socials/medium.svg",
+    "imageUrlSmall": "/images/socialsFooter/medium.svg",
+    "name": "Medium",
+    "link": "https://medium.com/@recruitsworld"
+  }
+]

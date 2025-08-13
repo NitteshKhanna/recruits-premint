@@ -1,0 +1,320 @@
+@import '../../../variables.scss';
+
+.admin-list {
+  width: 100vw;
+  padding: 4vw;
+  padding-bottom: 10rem;
+
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    
+    h1{
+      font-family: "Unbounded";
+      font-weight: 700;
+      font-size: 3.8rem;
+      line-height: 120%;
+      letter-spacing: 0%;
+
+    }
+  }
+
+  .add-admin-button {
+    border: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  
+  }
+
+  // Table styles
+  .admins-table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .admins-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    table-layout: fixed;
+
+    th, td {
+
+      &:first-child {
+        width: 30%;
+      }
+
+      &:nth-child(2) {
+        width: 60%;
+      }
+
+      &:last-child {
+        width: 20%;
+      }
+    }
+    
+    th {
+      text-align: left;
+      padding: 1rem 1.3rem;
+      font-family: "Satoshi";
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 120%;
+      letter-spacing: 0%;
+    }
+    
+    td {
+      padding: 1rem 1.3rem;
+      border-bottom: 1px solid $white;
+      position: relative;
+      font-family: "Satoshi";
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 120%;
+      letter-spacing: 0%;
+    }
+  }
+
+  .public-key-section {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .copy-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .delete-button {
+    font-family: "Satoshi";
+    padding: 0.6rem 2rem;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  // Modal styles
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .add-key-modal {
+    background-color: #121212;
+    width: 90%;
+    max-width: 40vw;
+    padding: 1.5rem;
+    border: 1px solid $white;
+    border-radius: 4px;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.3rem;
+    
+    h2 {
+      font-family: "Unbounded";
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 120%;
+      letter-spacing: 0%;
+
+    }
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    
+    &:hover {
+      color: #00d2ff;
+    }
+  }
+
+  .key-input {
+    width: 100%;
+    background-color: #181818;
+    border: 1px solid $white;
+    color: white;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.3rem;
+    outline: none;
+    border-radius: 2px;
+    
+    &:focus {
+      border-color: $blue;
+    }
+    
+    &::placeholder {
+      color: $white;
+      font-family: "Satoshi";
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 120%;
+      letter-spacing: 0%;
+
+    }
+  }
+
+  .upload-button {
+    font-family: "Satoshi";
+    padding: 0.6rem 2rem;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  // Toast styling
+  .Toastify__toast--success {
+    background-color: $black;
+    border: 1px solid $blue;
+    color: white;
+
+    .Toastify__progress-bar {
+      background: $blue;
+    }
+  }
+
+.Toastify__toast--error {
+  background-color: $black;
+  border: 1px solid $red;
+  color: white;
+
+  .Toastify__progress-bar {
+    background: $red;
+  }
+}
+
+.Toastify__close-button {
+  color: white;
+  opacity: 0.8;
+  clip-path: none;
+  border: none;
+  &:hover {
+    background: none;
+    border: none;
+    clip-path: none;
+    opacity: 1;
+  }
+}
+
+}
+
+// Responsiveness
+@media screen and (max-width: 1024px) {
+  .admin-list {
+    .admin-header {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .modal-header { 
+      h2{
+        font-size: 2rem;
+      }
+    }
+    .add-key-modal {
+      max-width: 90vw;  
+    }
+
+    //Toast
+    .Toastify__toast-container {
+      width: 90vw;
+      margin-top: 30px;
+      max-width: 320px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+  .Toastify__toast {
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+  }
+
+    .admins-table {
+      .hide-on-mobile {
+        display: none;
+      }
+
+      .buttons-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        button {
+          padding-left: 0;
+        }
+      }
+
+      .delete-button {
+        width: 3vw;
+        background: none;
+      }
+
+      th, td {
+        padding: 1rem 0;
+
+        &:first-child {
+          width: 75%;
+        }
+
+        &:last-child {
+          width: 25%;
+        }
+      }
+      
+      .public-key-section {
+        display: flex;
+        align-items: center;
+        word-break: break-all;
+        max-width: 90%;
+      }
+      
+      .public-key-text {
+        display: inline-block;
+        word-break: break-all;
+        white-space: normal;
+        font-family: "Satoshi";
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .admin-list {
+    .hide-on-laptop {
+      display: none;
+    }
+  }
+  }
+  

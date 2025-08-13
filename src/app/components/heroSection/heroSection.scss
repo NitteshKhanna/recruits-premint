@@ -1,0 +1,84 @@
+.heroSectionContainer {
+  justify-content: center;
+  .heroSection {
+    background: black;
+    width: 100vw;
+    height: 45rem;
+    background-image: url("../../../../public/images/heroSection/BG.svg");
+    background-size: cover;
+    .gradientOverlay {
+      background-image: url("../../../../public/images/heroSection/gradientOverlay.svg");
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .title {
+        margin-top: 10rem;
+        font-size: 3rem;
+        width: 100%;
+        font-weight: 600;
+      }
+      .captionContainer {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: center;
+        .caption {
+          font-size: 1.5rem;
+          font-weight: 400;
+          padding: 0;
+          margin: 0;
+          // width: 30%;
+        }
+      }
+      .exploreNow {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        a {
+          color: black;
+        }
+      }
+      .carouselContainer {
+        justify-content: center;
+        .carousel {
+          width: 60vw;
+        }
+      }
+    }
+  }
+  .ellipse {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroSectionContainer {
+    .heroSection {
+        height: max-content;
+      .gradientOverlay {
+        .title {
+          width: 100%;
+          font-size: 1.5rem;
+          text-align: center;
+        }
+        .captionContainer {
+          margin-top: 0.5rem;
+          .caption {
+            width: 90%;
+            font-size: 0.75rem;
+          }
+        }
+        .carouselContainer {
+          .carousel {
+            width: 90vw;
+          }
+        }
+      }
+    }
+    .ellipse {
+      display: none;
+    }
+  }
+}

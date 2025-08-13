@@ -1,0 +1,141 @@
+@import "./variables.scss";
+
+* {
+  color: $white;
+  transition: 0.5s;
+  box-sizing: border-box;
+  // overflow: hidden;
+  scrollbar-width: auto;
+  scroll-behavior: smooth;
+  &::selection {
+    background-color: rgba(128, 128, 128, 0.384);
+  }
+}
+html {
+  overflow: auto;
+}
+
+.title1 {
+  font-weight: 500;
+}
+
+.title2 {
+  font-weight: 500;
+}
+
+.satoshi {
+  font-family: "satoshi";
+}
+
+.unbounded {
+  font-family: "unbounded";
+}
+
+.unboundedLight {
+  font-family: "unboundedLight";
+}
+
+.invisible {
+  display: none !important;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // justify-content: ;
+}
+
+a {
+  text-decoration: none;
+  // color: $white;
+  &:hover {
+    color: $hoverBlue;
+  }
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  flex-basis: 20%;
+  font-family: "unbounded";
+}
+
+button {
+  color: $black;
+  padding: 1.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  border: transparent solid 1px;
+  outline: none;
+  clip-path: polygon(
+    10px 0%,
+    /* Top-left cut inward */ 100% 0%,
+    100% calc(100% - 10px),
+    /* Bottom-right cut starts */ calc(100% - 10px) 100%,
+    0% 100%,
+    0% 10px /* Match the top-left cut vertically */
+  );
+
+  cursor: pointer;
+  background-color: $blue;
+  &:hover {
+    background-color: $btnHoverBlue;
+    border: $btnHoverBlue solid 1px;
+  }
+}
+ul,
+ol {
+  list-style-position: inside;
+}
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.6rem solid $blue; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: 
+    // typing 3.5s steps(40, end),
+    blink-caret 1.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: $blue;
+  }
+}
+
+.footerPadding {
+  padding-bottom: 6rem !important ;
+}
+.socialsFooterPadding {
+  padding-bottom: 10rem !important;
+}
+@media (max-width: 576px) {
+.footerPadding {
+  padding-bottom: 0 !important ;
+}
+
+.sectionTitle
+{
+  font-size: 1.5rem;
+  text-align: center;
+}
+// .socialsFooterPadding {
+//   padding-bottom: 8rem !important;
+// }
+}

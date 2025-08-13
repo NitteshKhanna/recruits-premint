@@ -1,0 +1,181 @@
+@import "../../../variables.scss";
+
+.socials-container {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  width: 100vw;
+  background: radial-gradient(
+      circle at 80% 40%,
+      rgba(0, 221, 255, 0.3019607843),
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(0, 221, 255, 0.3019607843),
+      transparent 15%
+    ),
+    #171717 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.aboutSocials {
+    background: radial-gradient(
+        circle at 80% 40%,
+        rgba(0, 221, 255, 0.3019607843),
+        transparent 15%
+      ),
+      radial-gradient(
+        circle at 20% 70%,
+        rgba(0, 221, 255, 0.3019607843),
+        transparent 15%
+      ),
+      $dark-black 30%;
+  }
+  .socials-section {
+    width: 70vw;
+  }
+
+  .wings {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7rem;
+
+    .slash {
+      margin-left: 0.4vw;
+      display: inline-block;
+      transform: rotate(75deg);
+    }
+
+    p {
+      font-family: "Unbounded";
+      font-size: 1rem;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+
+    .community-section {
+      h2 {
+        font-family: "Unbounded";
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+
+      h5 {
+        font-family: "Satoshi";
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #ffffffa3;
+      }
+
+      .social-name {
+        transform: translateX(0);
+        margin-top: 0.4rem;
+        font-family: "Unbounded";
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+
+      .icons {
+        margin: 0 auto;
+        padding-top: 2rem;
+        display: flex;
+        width: 30vw;
+        gap: 5vw;
+        justify-content: space-evenly;
+
+        .icon {
+          cursor: pointer;
+          &:hover {
+            .box {
+              background-color: $white;
+            }
+            .social-icon {
+              fill: $black;
+            }
+            .social-name {
+              transform: translateX(2px);
+            }
+          }
+        }
+
+        .box {
+          transition: background-color 1s ease;
+          border: 1px solid $white;
+          padding: 1.2rem;
+
+          .social-icon {
+            fill: $white;
+            transition: fill 1s ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsiveness
+@media screen and (max-width: 1024px) {
+  .socials-container {
+    padding-top: 0;
+    padding-bottom: 3rem;
+    background: radial-gradient(
+        circle at 75% 30%,
+        $blue-gradient,
+        transparent 25%
+      ),
+      #171717 30%;
+    &.aboutSocials {
+      background: radial-gradient(
+          circle at 75% 30%,
+          $blue-gradient,
+          transparent 25%
+        ),
+        $dark-black 30%;
+    }
+    .socials-section {
+      width: 100vw;
+      height: 70%;
+      justify-content: center;
+
+      .main-container {
+        margin-top: 3rem;
+      }
+      .community-section {
+        width: 100vw;
+        h2 {
+          font-size: 1.3rem;
+        }
+        h5 {
+          font-size: 0.8rem;
+        }
+        .social-name {
+          font-size: 0.8rem;
+        }
+        .icons {
+          width: 95vw;
+          gap: 2vw;
+          justify-content: space-evenly;
+          margin-bottom: 8rem;
+        }
+      }
+
+      .hide-on-mobile {
+        display: none;
+      }
+    }
+  }
+}

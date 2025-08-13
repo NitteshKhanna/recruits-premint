@@ -1,0 +1,158 @@
+@import '../../../variables.scss';
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.history-container {
+  display: flex;
+  background: 
+    radial-gradient(circle at 75% 35%, $blue-gradient, transparent 15%),
+    radial-gradient(circle at 20% 70%, $blue-gradient, transparent 15%),
+    $dark-black 30%; 
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 45rem;
+
+  .history-section {
+    width: 70vw;
+
+    .picture-container {
+      display: flex;
+      gap: 2vw;
+  
+      .recruits-history {
+        width: 47vw;
+        height: 20rem;
+        padding: 1.5rem;
+        background: #2A2A2A33;
+        backdrop-filter: blur(200px);
+        font-family: "Satoshi";
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 105%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+  
+        .second-text {
+          margin-top: 1.5rem;
+        }
+
+        .third-text {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  
+    .lower-text {
+      margin-top: 1.5rem;
+      font-family: "Satoshi";
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 120%;
+      letter-spacing: 0%;
+      color: white;
+    }
+  }
+}
+
+// Responsiveness
+@media screen and (max-width: 1024px) {
+  .history-container {
+
+    .animate-on-mobile {
+      opacity: 0;
+    }
+
+    .animate-on-mobile.visible {
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    width: 100vw;
+    background: 
+    radial-gradient(circle at 25% 40%, $blue-gradient, transparent 40%),
+    $dark-black 30%; 
+
+    .history-section {
+      width: 95vw;
+
+      .picture-container {
+        width: 75vw;
+        flex-direction: column;
+
+        .main-container {
+          width: 95vw;
+          display: flex;
+          justify-content: space-between;
+
+          .main-image {
+            animation-delay: 0.2s;
+          }
+
+
+          .side-text {
+            animation-delay: 0.6s;
+            margin-top: 3rem;
+          }
+
+          .slash {
+            margin-left: 0.25rem;
+            display: inline-block;
+            transform: rotate(75deg);
+          }
+      
+          p {
+            align-items: center;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+          }
+        }
+
+        .recruits-history {
+          width: 95vw;
+          height: 100%;
+          animation-delay: 0.6s;
+          line-height: 90%;
+          margin-bottom: 10rem;
+
+
+          p{
+            font-weight: 400;
+            font-size: 0.8rem;
+          }
+
+          
+        }
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      .lower-text {
+        animation-delay: 0.8s;
+        margin-bottom: 10rem;
+        height: 100%;
+        font-weight: 400;
+        font-size: 0.8rem;
+      }
+      .hide-on-mobile {
+            display: none;
+          }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hide-on-laptop {
+    display: none;
+  }
+}

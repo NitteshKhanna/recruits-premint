@@ -1,0 +1,58 @@
+.termsAndConditions {
+  padding: 10rem;
+  padding-top: 12.5rem;
+  // padding-bottom: 0;
+  .pageTitle {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .pageCaption {
+    margin-bottom: 2rem;
+  }
+  .heading {
+    font-family: "satoshi";
+    padding: 1.5rem;
+    font-weight: bold;
+    // padding-left: 2rem;
+    font-size: 1.8rem;
+  }
+  .subHeading
+  {
+
+    padding: 1rem;
+    padding-left: 0;
+    font-size: 1.25rem;
+    font-family: "satoshi";
+  }
+  p {
+    font-family: "satoshi";
+  }
+  ul {
+  list-style-type: disc; 
+  list-style-position: inside;
+  padding-left: 2rem;
+  margin: 1rem 0;
+  // background-color: red;
+  li {
+    margin-bottom: 0.5rem;
+    
+    &::marker {
+      color: white;
+    }
+  }
+}
+}
+
+@media (max-width: 576px) {
+.termsAndConditions {
+  padding: 2rem;
+  padding-top: 5rem;
+  .pageTitle {
+    font-size: 2rem;
+    // margin-bottom: 1rem;
+  }
+  // .pageCaption {
+    //   margin-bottom: 2rem;
+    // }
+  }
+}

@@ -1,0 +1,84 @@
+.configurationSection {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .configurationTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .configurationTable th,
+  .configurationTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .configurationTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .configurationTable tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .createConfigSection {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+  .edit-button, .create-button {
+    padding: 6px 12px;
+    background-color: #66cc66;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #57b557;
+    }
+  }
+
+  .delete-button{
+    padding: 6px 12px;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #ff4c4c;
+    }
+  }

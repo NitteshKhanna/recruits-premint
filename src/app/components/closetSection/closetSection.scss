@@ -1,0 +1,129 @@
+.closetSection {
+  padding: 8.5vw;
+  .sec1 {
+    width: 100%;
+    justify-content: space-between;
+    .subSec1 {
+      justify-content: start;
+      .sectionTitle {
+        flex-basis: 100%;
+      }
+      p {
+        margin-top: 0.5rem;
+      }
+    }
+    .subSec2
+    {
+      display: block;
+    }
+  }
+  .sec2 {
+    justify-content: space-between;
+    padding: 0 5rem;
+    .primaryImg {
+      z-index: 2;
+      width: 25.25vw;
+      height: 32.5rem;
+    }
+    .secondaryImg {
+      width: 19vw;
+      height: 19.7rem;
+      position: relative;
+      transition-timing-function: ease-out;
+      animation-duration: 4s;
+    }
+  }
+  .closetCTAMobile
+  {
+    display: none;
+  }
+}
+
+.slideOutRight {
+  animation-name: slideOutRight;
+}
+.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+@keyframes slideOutRight {
+  0% {
+    // transform: scale(.1);
+    right: 30rem;
+    opacity: 75%;
+  }
+  100% {
+    // transform: scale(1);
+    right: 0;
+    opacity: 100%;
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    // transform: scale(.1);
+    left: 30rem;
+    opacity: 50%;
+  }
+  100% {
+    // transform: scale(1);
+    left: 0;
+    opacity: 100%;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+
+.closetSection {
+  padding: 2vw;
+  .sec1 {
+    width: 100%;
+    justify-content: space-between;
+    .subSec1 {
+      justify-content: start;
+      .sectionTitle {
+        flex-basis: 100%;
+        text-align: center;
+      }
+      p {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+      }
+    }
+    .subSec2 
+    {
+      display: none;
+    }
+  }
+  .sec2 {
+    justify-content: space-between;
+    padding: 7vw 2vw;
+    .primaryImg {
+      height: max-content;
+      z-index: 2;
+      width: 40vw;
+      // height: 32.5rem;
+    }
+    .secondaryImg {
+      height: max-content;
+      width: 25vw;
+      // height: 19.7rem;
+      position: relative;
+      transition-timing-function: ease-out;
+      animation-duration: 4s;
+    }
+  }
+  .ctaContainer
+  {
+    width: 100%;
+    justify-content: center;
+    .closetCTAMobile
+    {
+      display: block;
+    }
+  }
+}
+}

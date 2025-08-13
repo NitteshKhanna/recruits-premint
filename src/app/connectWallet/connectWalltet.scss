@@ -1,0 +1,67 @@
+@import "../variables.scss";
+
+.connectWallet {
+  padding: 10rem;
+  padding-top: 12.5rem;
+  padding-bottom: 10rem;
+  justify-content: center;
+  .connectWalletContainer {
+    width: 66vw;
+    height: 30rem;
+    .sec1 {
+      // padding: 2rem;
+      justify-content: center;
+      height: 100%;
+      border: white 1px solid;
+      flex-basis: 50%;
+      img {
+        width: 95%;
+        // object-fit: cover;
+      }
+    }
+    .sec2 {
+      height: 100%;
+      border: white 1px solid;
+      flex-basis: 50%;
+      justify-content: center;
+      align-items: center;
+      .sec2Container {
+        justify-content: center;
+      }
+      h3 {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .connectWallet {
+    min-height: 95vh;
+    padding: 1rem;
+    padding-top: 5rem;
+    .connectWalletContainer {
+    height: max-content;
+      width: 80vw;
+      .sec1 {
+      border: none;
+      flex-basis: 100%;
+      margin-bottom: 2rem;
+      img {
+        width: 95%;
+      }
+    }
+    .sec2 {
+      border: none;
+      flex-basis: 100%;
+      button 
+      {
+        font-size: 1.2rem;
+      }
+    }
+    }
+  }
+}

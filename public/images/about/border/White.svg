@@ -1,0 +1,21 @@
+<svg class="border-svg" width="241" height="256" viewBox="0 0 241 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="border-mask">
+      <!-- White background to make the outer area visible -->
+      <rect width="241" height="256" fill="white" stroke="white" stroke-width="2"/>
+      <!-- Black path to make the inner area transparent -->
+      <path
+        d="M104.195 4.494C104.195 6.544 106.755 8.206 109.315 8.206H219.341C221.901 8.206 224.461 6.544 224.461 4.494V0.871H240.93V218.998L189.219 255.485H0.0652V174.478H6.549C9.436 174.478 11.996 172.816 11.996 170.766V83.96C11.996 82.298 9.436 80.636 6.549 80.636H0.0652V0.871H104.195V4.494Z"
+        fill="black"
+      />
+    </mask>
+  </defs>
+  <!-- Apply the mask to the white rectangle -->
+  <rect
+    width="241.93"
+    height="254.61"
+    transform="translate(0.0652 0.8712)"
+    fill="white"
+    mask="url(#border-mask)"
+  />
+</svg>

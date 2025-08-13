@@ -1,0 +1,145 @@
+@import "../../../variables.scss";
+
+.intro-container {
+  background: radial-gradient(circle, $blue-gradient, transparent 40%),
+    $dark-black 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+
+  .intro-section {
+    margin-top: 8rem;
+    width: 70vw;
+    display: flex;
+  }
+
+  .image-container {
+    padding-top: 0.7rem;
+    display: flex;
+    width: 30vw;
+    margin: 0 auto;
+    .swap-img {
+      width: 13.6rem;
+      height: 16.5rem;
+      
+    }
+  }
+  .swap-img {
+    position: absolute;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  .top-right {
+    z-index: 1;
+    &.initial {
+      transform: translate(200px, 0);
+    }
+    &.swapped {
+      transform: translate(220px, 0);
+    }
+  }
+
+  .top-left {
+    z-index: 2;
+    &.initial {
+      transform: translate(0, 15px);
+    }
+    &.swapped {
+      transform: translate(170px, 200px);
+    }
+  }
+
+  .bottom-left {
+    z-index: 3;
+    &.initial {
+      transform: translate(60px, 140px);
+    }
+    &.swapped {
+      transform: translate(-40px, 30px);
+    }
+  }
+
+  .intro-text {
+    max-width: 40vw;
+    transition: transform 0.5s;
+    transform: translateX(25px);
+
+    &.hovered {
+      transform: translateX(70px);
+    }
+
+    h1 {
+      font-family: "Unbounded";
+      font-weight: 700;
+      font-size: 3.8rem;
+      line-height: 120%;
+      letter-spacing: 0%;
+    }
+
+    h5 {
+      margin-top: 1.5rem;
+      font-family: "Satoshi";
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 120%;
+      letter-spacing: 0%;
+    }
+  }
+}
+
+// Responsiveness
+@media screen and (max-width: 1024px) {
+  .intro-container {
+    padding: 0.7rem;
+    background: radial-gradient(
+        circle at 25% 20%,
+        $blue-gradient,
+        transparent 40%
+      ),
+      radial-gradient(circle at 70% 75%, $blue-gradient, transparent 30%),
+      $dark-black 30%;
+
+    .intro-section {
+      width: 100vw;
+      flex-direction: column;
+      margin-top: 0;
+
+      .image-container {
+        margin-left: -4vw;
+        width: 100vw;
+        height: 60vh;
+        transform: scale(0.7);
+        .swap-img {
+          transition: transform 1s ease-out; // Slightly longer and smoother for scroll animation
+        }
+      }
+
+      .intro-text {
+        display: flex;
+        flex-direction: column;
+        max-width: 95vw;
+        transform: none;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          font-size: 1.9rem;
+        }
+        h5 {
+          text-align: center;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .intro-container {
+    .intro-section {
+      .image-container {
+        transform: scale(0.6);
+      }
+    }
+  }
+}

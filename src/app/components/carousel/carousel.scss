@@ -1,0 +1,41 @@
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: auto; // Changed from smooth to prevent conflicts with JS animation
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: grab;
+  
+  // Add will-change for better performance
+  will-change: scroll-position;
+  
+  // Prevent text selection during drag
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  
+  &:active {
+    cursor: grabbing;
+  }
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  img {
+    flex: 0 0 auto;
+    width: 12rem;
+    height: 15rem;
+    object-fit: cover;
+    user-select: none;
+    // border: white 1px solid;
+    pointer-events: none; // Prevent image drag conflicts
+    
+    // Optimize for animations
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+}

@@ -1,0 +1,83 @@
+@import "../variables.scss";
+
+.admin-container {
+  background-color: $dark-black;
+  padding-top: 8rem;
+}
+
+
+
+.tab-bar {
+  display: flex;
+  margin: 0 auto;
+  border: 2px solid #00ddff;
+  // min-width: 280px;
+  width: 50vw;
+  height: 3.4rem;
+  border-radius: 3rem;
+  border-width: 1.6px;
+  padding-top: 0.4rem;
+  padding-left: .5rem;
+  padding-bottom: 0.4rem;
+  padding-right: .5rem;
+  justify-content: space-between;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: none;
+    border-radius: 50px;
+    border: none;
+    background: none;
+    color: $white;
+    width: 44vw;
+    height: 2.5rem;
+    border-radius: 3rem;
+    padding-top: 0.4rem;
+    padding-right: 5.5rem;
+    padding-bottom: 0.4rem;
+    padding-left: 5.5rem;
+    font-family: "Satoshi";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    &.active {
+      color: $black;
+      background: linear-gradient(178.04deg, #00ddff 1.66%, #008599 98.34%);
+      font-weight: 700;
+    }
+  }
+}
+
+.tab-content {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+//Responsiveness
+@media screen and (max-width: 1024px) {
+  .tab-bar {
+    width: 90vw;
+
+    button {
+      padding-top: 0.4rem;
+      padding-right: 2.5rem;
+      padding-bottom: 0.4rem;
+      padding-left: 2.5rem;
+    }
+  }
+}
+
+// @media (max-width: 576px) {
+//   .admin-container {
+//     padding-bottom: 8rem !important;
+//   }
+// }
