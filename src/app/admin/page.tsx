@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "./admin.scss";
 import AdminDashboard from "../components/admin/dashboard/page";
-import AdminList from "../components/admin/admin-list/page";
+import AdminList from "../components/admin/admin-list/admin-list";
 import { User } from "@/app/models/User";
 import { LoginData } from "@/app/models/loginData";
 
