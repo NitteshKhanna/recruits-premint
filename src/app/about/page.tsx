@@ -1,11 +1,11 @@
 "use client";
 import { useEffect } from "react";
-import Choice from "../components/about/choice/page";
-import History from "../components/about/history/page";
-import Intro from "../components/about/intro/page";
+import Choice from "../components/about/choice/choice";
+import History from "../components/about/history/history";
+import Intro from "../components/about/intro/intro";
 import Socials from "../components/about/socials/socials";
-import Traits from "../components/about/traits/page";
-import Welcome from "../components/about/welcome/page";
+import Traits from "../components/about/traits/traits";
+import Welcome from "../components/about/welcome/welcome";
 import "./about.scss";
 
 export function About() {
