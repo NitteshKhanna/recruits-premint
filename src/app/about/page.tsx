@@ -8,7 +8,7 @@ import Traits from "../components/about/traits/traits";
 import Welcome from "../components/about/welcome/welcome";
 import "./about.scss";
 
-export function About() {
+export default function About() {
   useEffect(() => {
     if (window.innerWidth <= 1024) {
       const observer = new IntersectionObserver(
@@ -48,5 +48,3 @@ export function About() {
     </div>
   );
 }
-
-export default About;
