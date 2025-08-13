@@ -3,7 +3,7 @@ import HeroSection from "../heroSection/heroSection";
 import StorySection from "../storySection/storySection";
 import AnnouncementSection from "../announcementSection/announcementSection";
 import ClosetSection from "../closetSection/closetSection";
-import Socials from "../about/socials/page";
+import Socials from "../about/socials/socials";
 import Footer from "../footer/footer";
 
 export function Landing() {
@@ -15,10 +15,6 @@ export function Landing() {
       <AnnouncementSection />:<></>}
       <ClosetSection />
       <Socials />
-      {/* <Footer/> */}
-      {/* <Announcements /> */}
-      {/* <Admin/> */}
-      {/* <Configurations /> */}
     </div>
   );
 }

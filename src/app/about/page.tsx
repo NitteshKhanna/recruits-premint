@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Choice from "../components/about/choice/page";
 import History from "../components/about/history/page";
 import Intro from "../components/about/intro/page";
-import Socials from "../components/about/socials/page";
+import Socials from "../components/about/socials/socials";
 import Traits from "../components/about/traits/page";
 import Welcome from "../components/about/welcome/page";
 import "./about.scss";
