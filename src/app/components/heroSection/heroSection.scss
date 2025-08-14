@@ -56,7 +56,11 @@
 @media (max-width: 576px) {
   .heroSectionContainer {
     .heroSection {
-        height: max-content;
+      height: max-content;
+      background-image: url("../../../../public/images/heroSection/BGMobile.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       .gradientOverlay {
         .title {
           width: 100%;

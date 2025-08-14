@@ -82,7 +82,9 @@
         $dark-black 70%,
         $dark-black 100%
       ),
-      url("/image.svg");
+      url("/images/about/mobileBG.svg");
+      background-position: center;
+      background-size: cover;
 
     .parallelogram {
       max-width: 80%;
