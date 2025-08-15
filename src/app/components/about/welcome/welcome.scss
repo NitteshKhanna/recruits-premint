@@ -12,11 +12,7 @@
 }
 
 .welcome-container {
-  background-image: linear-gradient(
-      to bottom,
-      #00000042 0%,
-      #000000 100%
-    ),
+  background-image: linear-gradient(to bottom, #00000042 0%, #000000 100%),
     url("/images/about/Rectangle 2.svg");
   background-repeat: no-repeat;
   background-blend-mode: luminosity;
@@ -78,36 +74,36 @@
       url("/images/about/mobileBG.svg");
     background-position: center;
     background-size: cover;
-    
+
     .animate-on-mobile {
       opacity: 0;
       // Add will-change for better performance on mobile
       will-change: opacity, transform;
     }
-    
+
     .animate-on-mobile.visible {
       animation: fadeInUp 1s ease forwards;
     }
-    
+
     .parallelogram {
       max-width: 80%;
       animation-delay: 0.6s;
-      
+
       foreignObject {
         x: 40;
         y: 25;
         width: 400;
         height: 120;
       }
-      
+
       .textContainer {
         gap: 0.3rem;
         padding: 5px;
-        
+
         p {
           font-size: 1.2rem;
         }
-        
+
         h3 {
           font-size: 1.8rem;
           // Ensure text is visible even if animation fails
@@ -127,10 +123,12 @@
 
 .foreign-object-ios {
   display: none;
-  p 
 
-  {
-    font-size: 1rem;
+  .textContainer {
+    background-color: red;
+    p {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -139,7 +137,7 @@
   .foreign-object-desktop {
     display: none;
   }
-  
+
   .foreign-object-ios {
     display: block;
   }
@@ -148,24 +146,24 @@
   .welcome-container {
     // Ensure minimum height on smaller screens
     min-height: 45rem;
-    
+
     .parallelogram {
       // Ensure SVG is properly sized on iPhone
       max-width: 90%;
       min-height: 174px;
-      
+
       .textContainer {
         // Ensure proper positioning on iPhone
         position: relative;
         z-index: 2;
-        
+
         h3 {
           font-size: 2rem;
           // Additional backup styles for iPhone
           display: block;
           visibility: visible;
         }
-        
+
         p {
           font-size: 1.3rem;
         }
