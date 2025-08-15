@@ -4,6 +4,11 @@ import "./welcome.scss"
 
 export function Welcome() {
   useEffect(() => {
+    // iOS Detection
+    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      document.body.classList.add('is-ios');
+    }
+    
     if (window.innerWidth <= 1024) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -101,7 +106,13 @@ export function Welcome() {
             />
           </filter>
         </defs>
-        <foreignObject x="60" y="35" width="480" height="100">
+        <foreignObject x="60" y="35" width="480" height="100" className="foreign-object-desktop">
+          <div className="textContainer">
+            <h3>Welcome to the Grid</h3>
+            <p>A digital utopia... but something is breaking.</p>
+          </div>
+        </foreignObject>
+        <foreignObject x="30" y="20" width="350" height="120" className="foreign-object-ios">
           <div className="textContainer">
             <h3>Welcome to the Grid</h3>
             <p>A digital utopia... but something is breaking.</p>
