@@ -11,14 +11,14 @@ import { LoadingProvider } from "@/contexts/LoadingContext";
 import Loading from "./components/loading/loading";
 
 export const metadata: Metadata = {
-  title: "The Recruits",
+  title: "Recruits",
   description: "Break free from control",
   
   openGraph: {
-    title: "The Recruits",
+    title: "Recruits",
     description: "Break free from control",
     url: "https://www.recruits.world",
-    siteName: "The Recruits",
+    siteName: "Recruits",
     type: "website",
     images: [
       {
