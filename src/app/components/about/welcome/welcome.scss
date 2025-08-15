@@ -53,7 +53,7 @@
 .textContainer h3 {
   font-family: "Unbounded";
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.4rem;
   line-height: 120%;
   letter-spacing: 0%;
 }
@@ -96,12 +96,14 @@
       foreignObject {
         x: 40;
         y: 25;
+        width: 400;
+        height: 120;
       }
       
       .textContainer {
-        // gap: 0.3rem;
-        // padding: 5px;
-        background-color: red;
+        gap: 0.3rem;
+        padding: 5px;
+        
         p {
           font-size: 1.2rem;
         }
