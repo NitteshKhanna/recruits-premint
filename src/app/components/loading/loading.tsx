@@ -35,8 +35,8 @@ export default function Loading() {
   return (
     <div className={`loading-overlay ${fadeOut ? 'fade-out' : ''}`}>
       <div className="loading-content">
-        {/* Your custom loading design here */}
         <div className="custom-spinner"></div>
+        {/* <img src="./images/logoColor.svg" alt="" /> */}
         <h2>Loading...</h2>
       </div>
     </div>
