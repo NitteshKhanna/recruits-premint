@@ -8,9 +8,8 @@ import "./fonts.scss";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import SocialsFooter from "./components/socialsFooter/socialsFooter";
-
-
-
+import { LoadingProvider } from "@/contexts/LoadingContext";
+import Loading from "./components/loading/loading";
 
 export const metadata: Metadata = {
   title: "The Recruits",
@@ -24,18 +23,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Web3Provider>
-        <body >
-          <div className="page" >
-            <Header />
-            <main>
-              {children}
-            </main>
-            <SocialsFooter/>
-            <Footer/>
-          </div>
-        </body>
-      </Web3Provider>
+      <LoadingProvider>
+        <Web3Provider>
+          <body>
+            <Loading />
+            <div className="page">
+              <Header />
+              <main>{children}</main>
+              <SocialsFooter />
+              <Footer />
+            </div>
+          </body>
+        </Web3Provider>
+      </LoadingProvider>
     </html>
   );
 }
