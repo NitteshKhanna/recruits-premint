@@ -128,7 +128,7 @@ export function Header() {
       <div className="navBar flex">
         <h3 className="title1 unbounded">
           <Link rel="stylesheet" className="logoTxt" href="/">
-            Recruits
+            <img src="./images/logoWhite.svg" alt="Logo" />
           </Link>
         </h3>
         <img

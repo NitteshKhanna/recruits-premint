@@ -13,7 +13,14 @@
     padding-left: 2vw;
     padding-right: 2vw;
     justify-content: space-between;
-    width: 50vw;
+    width: 65vw;
+    .title1
+    {
+      img 
+      {
+        height: 2rem;
+      }
+    }
     .navItems {
       justify-content: space-between;
       display: flex;
