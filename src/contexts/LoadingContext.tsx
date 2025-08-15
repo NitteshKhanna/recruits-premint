@@ -27,7 +27,7 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
         setIsLoading(false)
       }, 500) // Match CSS transition duration
       
-    }, 5000) // 5 seconds
+    }, 3000) // 5 seconds
 
     return () => clearTimeout(timer)
   }, [])
