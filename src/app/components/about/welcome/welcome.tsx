@@ -101,7 +101,7 @@ export function Welcome() {
             />
           </filter>
         </defs>
-        <foreignObject x="10%" y="20%" width="80%" height="60%">
+        <foreignObject x="60" y="35" width="480" height="100">
           <div className="textContainer">
             <h3>Welcome to the Grid</h3>
             <p>A digital utopia... but something is breaking.</p>
