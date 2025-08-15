@@ -126,13 +126,14 @@
 
   .textContainer {
     // background-color: red;
+    margin-left: -.5rem;
     h3 
     {
       font-size: 1.4rem !important;
     }
     p {
       font-size: 1.1rem !important;
-      background-color: red;
+      // background-color: red;
     }
   }
 }
