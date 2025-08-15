@@ -11,15 +11,37 @@ export function Welcome() {
             entry.target.classList.add('visible');
           }
         });
-      }, { threshold: 0.1 });
-      
+      }, { 
+        threshold: 0.05, // Lowered threshold for better iPhone compatibility
+        rootMargin: '50px 0px' // Triggers earlier for better mobile experience
+      });
+     
       document.querySelectorAll('.animate-on-mobile').forEach(element => {
         observer.observe(element);
+        
+        // Check if already in viewport on mount (important for iPhone)
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          element.classList.add('visible');
+        }
       });
       
-      return () => observer.disconnect();
+      // Fallback timeout to ensure visibility on iPhone
+      const fallbackTimeout = setTimeout(() => {
+        document.querySelectorAll('.animate-on-mobile').forEach(element => {
+          if (!element.classList.contains('visible')) {
+            element.classList.add('visible');
+          }
+        });
+      }, 1000);
+     
+      return () => {
+        observer.disconnect();
+        clearTimeout(fallbackTimeout);
+      };
     }
   }, []);
+
   return (
     <div className="welcome-container">
       <svg
@@ -89,4 +111,5 @@ export function Welcome() {
     </div>
   );
 }
+
 export default Welcome;
