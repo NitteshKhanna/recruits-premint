@@ -127,9 +127,9 @@ export function Header() {
       <img className="leftWing" src="./images/header/left wing.svg" alt="" />
       <div className="navBar flex">
         <h3 className="title1 unbounded">
-          <Link rel="stylesheet" className="logoTxt" href="/">
+          <a rel="stylesheet" className="logoTxt" href="/">
             <img src="./images/logoWhite.svg" alt="Logo" />
-          </Link>
+          </a>
         </h3>
         <img
           className="menuIcon"
@@ -140,9 +140,9 @@ export function Header() {
         <div className="navItems flex">
           {pages.map((page, index) => (
             <h4 className="navItem title2 satoshi" key={index}>
-              <Link rel="stylesheet" href={page.link}>
+              <a rel="stylesheet" href={page.link}>
                 {page.name}
-              </Link>
+              </a>
             </h4>
           ))}
         </div>
@@ -154,9 +154,9 @@ export function Header() {
       <div className={`mobileMenu ${menuClicked ? "clicked" : ""}`}>
         <div className="topSection flex">
           <h3 className="title1 unbounded">
-            <Link rel="stylesheet" className="logoTxt" href="/">
+            <a rel="stylesheet" className="logoTxt" href="/">
               Recruits
-            </Link>
+            </a>
           </h3>
           <img
             className="closeIcon"
@@ -167,7 +167,7 @@ export function Header() {
         </div>
         <div className="menuBar flex">
           {pages.map((page, index) => (
-            <Link
+            <a
               className="menuItem satoshi"
               href={page.link}
               title={page.name}
@@ -175,7 +175,7 @@ export function Header() {
               onClick={handleMenuItemClick}
             >
               {page.name}
-            </Link>
+            </a>
           ))}
           <ConnectWallet parentComponent="navbar" />
         </div>

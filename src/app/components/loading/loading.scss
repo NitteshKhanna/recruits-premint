@@ -1,4 +1,7 @@
-// styles/loading.scss or add to your global styles
+// styles/loading.scss
+// Path: src/styles/loading.scss (if using src folder)
+// OR: styles/loading.scss (if no src folder)
+// OR add directly to: src/app/globals.scss
 .loading-overlay {
   position: fixed;
   top: 0;
@@ -37,7 +40,7 @@
   border: 3px solid transparent;
   border-top: 3px solid #fff;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 2s linear infinite; // Changed from 1s to 2s (slower)
   margin: 0 auto;
 }
 

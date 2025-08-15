@@ -36,7 +36,7 @@ export function ClosetSection() {
         <div className="subSec2">
           {process.env.NEXT_PUBLIC_ISMINT === "true" ? (
             <button className="closetCTADesktop">
-              <Link href="/closet">Open your closet</Link>
+              <a href="/closet">Open your closet</a>
             </button>
           ) : (
             <></>
@@ -63,7 +63,7 @@ export function ClosetSection() {
       <div className="ctaContainer flex">
         {process.env.NEXT_PUBLIC_ISMINT === "true" ? (
           <button className="closetCTAMobile">
-            <Link href="/closet">Open your closet</Link>
+            <a href="/closet">Open your closet</a>
           </button>
         ) : (
           <></>

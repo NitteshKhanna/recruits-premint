@@ -24,12 +24,12 @@ export function Socials() {
             <div className="icons">
               {socialsJSON.map((social,index) => (
                 <div className="icon" title={social.name} key={index}>
-                  <Link href={social.link}>
+                  <a href={social.link}>
                     <div className="box flex">
                       <img src={social.imageUrlBig} alt={social.name} />
                     </div>
                     <h2 className="social-name">{social.name}</h2>
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>

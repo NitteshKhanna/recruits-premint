@@ -1,6 +1,4 @@
 // contexts/LoadingContext.tsx
-// Path: src/contexts/LoadingContext.tsx (if using src folder)
-// OR: contexts/LoadingContext.tsx (if no src folder)
 'use client'
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
@@ -9,39 +7,47 @@ interface LoadingContextType {
   setIsLoading: (loading: boolean) => void
   showLoading: () => void
   hideLoading: () => void
+  markContentReady: () => void // New function to mark content as ready
 }
 
 const LoadingContext = createContext<LoadingContextType | undefined>(undefined)
 
 export function LoadingProvider({ children }: { children: ReactNode }) {
-  const [isLoading, setIsLoading] = useState(true) // Start with loading
-  const [fadeOut, setFadeOut] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [timerComplete, setTimerComplete] = useState(false)
+  const [contentReady, setContentReady] = useState(false)
 
+  // 5-second minimum timer
   useEffect(() => {
-    // 5-second timer
     const timer = setTimeout(() => {
-      setFadeOut(true) // Start fade out
-      
-      // Hide loading after fade animation
-      setTimeout(() => {
-        setIsLoading(false)
-      }, 500) // Match CSS transition duration
-      
-    }, 3000) // 5 seconds
+      setTimerComplete(true)
+    }, 1000) // 5 seconds minimum
 
     return () => clearTimeout(timer)
   }, [])
 
+  // Hide loading only when BOTH conditions are met
+  useEffect(() => {
+    if (timerComplete && contentReady) {
+      // Optional: Add small delay for smooth transition
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 300)
+    }
+  }, [timerComplete, contentReady])
+
+  const markContentReady = () => {
+    setContentReady(true)
+  }
+
   const showLoading = () => {
     setIsLoading(true)
-    setFadeOut(false)
+    setTimerComplete(false)
+    setContentReady(false)
   }
   
   const hideLoading = () => {
-    setFadeOut(true)
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 500)
+    setIsLoading(false)
   }
 
   return (
@@ -49,7 +55,8 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
       isLoading, 
       setIsLoading, 
       showLoading, 
-      hideLoading 
+      hideLoading,
+      markContentReady
     }}>
       {children}
     </LoadingContext.Provider>

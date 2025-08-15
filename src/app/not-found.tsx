@@ -9,7 +9,7 @@ export function notFound() {
         <img src="/images/notFound/mobileBG.svg" className="notFoundImg" alt="" />
         <h1 className="title unbounded">LOST IN THE GRID?</h1>
         <button>
-          <Link href="/">Return home</Link>
+          <a href="/">Return home</a>
         </button>
       </div>
     </div>

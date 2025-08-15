@@ -25,14 +25,14 @@ export function Footer() {
     <div className="footer">
       <div className="navItems flex">
         {navItems.map((navItem) => (
-          <Link
+          <a
             rel="stylesheet"
             key={navItem.name}
             className="navItem satoshi"
             href={navItem.link}
           >
             {navItem.name}
-          </Link>
+          </a>
         ))}
       </div>
       <div className="copyrightByline unbounded">

@@ -21,9 +21,9 @@ export function SocialsFooter() {
   return (
     <div className={`socialsFooter flex ${isSocialsFooter ? "" : "invisible"}`}>
       {socialsJSON.map((social, index) => (
-        <Link href={social.link} key={index}>
+        <a href={social.link} key={index}>
           <img src={social.imageUrlSmall} alt={social.name} />
-        </Link>
+        </a>
       ))}
     </div>
   );
