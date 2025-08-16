@@ -147,7 +147,7 @@ export function Header() {
           ))}
         </div>
         <div className="connectWalletBtnContainer">
-          <ConnectWallet parentComponent="navbar" />
+          {/* <ConnectWallet parentComponent="navbar" /> */}
         </div>
       </div>
       <img className="rightWing" src="./images/header/right wing.svg" alt="" />
@@ -177,7 +177,7 @@ export function Header() {
               {page.name}
             </a>
           ))}
-          <ConnectWallet parentComponent="navbar" />
+          {/* <ConnectWallet parentComponent="navbar" /> */}
         </div>
       </div>
     </div>
