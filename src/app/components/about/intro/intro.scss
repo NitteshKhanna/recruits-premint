@@ -24,6 +24,13 @@
       height: 16.5rem;
       
     }
+    &.single-image{
+      justify-content: center;
+      img {
+        width: 20rem;
+        height: 24rem;
+      }
+    }
   }
   .swap-img {
     position: absolute;
